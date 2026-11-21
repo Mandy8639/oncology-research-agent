@@ -1,0 +1,1 @@
+"""Detective controls package."""

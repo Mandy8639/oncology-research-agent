@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>oncology-research-agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+  <div class="bg-wash" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <h1>oncology-research-agent</h1>
+        <p class="tagline">Bounded research answers over a governed synthetic corpus</p>
+      </div>
+    </div>
+    <p class="disclaimer">Demo · synthetic data only · not affiliated with Pathos · never for clinical use</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel" id="controls-panel">
+      <div class="panel-head">
+        <h2>Controls digest</h2>
+        <span id="pause-badge" class="badge">loading</span>
+      </div>
+      <div id="controls-grid" class="metric-grid"></div>
+      <p id="controls-note" class="muted"></p>
+    </section>
+
+    <section class="panel" id="eval-panel">
+      <div class="panel-head">
+        <h2>Latest eval report</h2>
+        <span id="eval-mode" class="badge badge-teal">stub</span>
+      </div>
+      <div id="eval-table-wrap"></div>
+      <p id="eval-meta" class="muted"></p>
+    </section>
+
+    <section class="panel" id="questions-panel">
+      <div class="panel-head">
+        <h2>Question queue</h2>
+        <button type="button" class="ghost" id="refresh-btn">Refresh</button>
+      </div>
+      <div id="questions-list" class="stack"></div>
+    </section>
+
+    <section class="panel" id="review-panel">
+      <div class="panel-head">
+        <h2>Review queue</h2>
+        <span class="muted">held answers require a human reason</span>
+      </div>
+      <div id="review-list" class="stack"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Every number on this page is loaded from the API / committed eval report — nothing hard-coded.</p>
+  </footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
